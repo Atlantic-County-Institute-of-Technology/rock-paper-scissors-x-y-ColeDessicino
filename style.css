@@ -1,7 +1,21 @@
+body {
+    overflow: hidden;
+    height: 1000px;
+    background: linear-gradient(140deg, rgba(68,156,247,1) 0%, rgba(77,83,251,1) 25%, rgba(158,0,255,1) 50%, rgba(102,0,245,1) 75%, rgba(0,212,255,1) 100%);
+}
+
+
 .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
     margin-left: 35%;
+    margin-right: 35%;
+    height: 650px;
+    background: linear-gradient(45deg, rgba(161,45,255,1) 10%, rgba(112,56,255,1) 50%, rgba(161,45,255,1) 90%);
+    box-shadow: 0px 0px 100px 0px rgb(0, 0, 0);
+    border-radius: 10%;
 }
 
 .padding_options {
@@ -15,13 +29,18 @@
     align-items: center;
     height: 100px;
     width: 500px;
-    background-color: cyan;
+
 }
 
 .image {
     height: 70px;
     width: 70px;
     border-radius: 50%;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
 }
 
 .option_1 {
@@ -69,9 +88,38 @@
 }
 
 .vs {
-    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
     width: 500px;
-    background-color: rgb(255, 0, 0);
+
+}
+
+.image_you {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: blue;
+}
+
+.image_you {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+
+.image_computer {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+
+.battle_text {
+    font-size: 100px;
 }
 
 .padding_winner {
@@ -79,7 +127,23 @@
 }
 
 .winner {
-    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
     width: 500px;
-    background-color: rgb(153, 0, 255);
+
 }
+
+.winner_display {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+
+.reason {
+    font-size: 30px;
+}
+
