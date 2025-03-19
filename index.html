@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock, </title>
+    <title>Rock, Paper, Scissors, X, Y</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="padding_options">
             <div class="options">
-                <button class="image option_1"><img class="icon" src="assets/paper.png" alt=""></button>
-                <button class="image option_2"></button>
-                <button class="image option_3"></button>
-                <button class="image option_4"></button>
-                <button class="image option_5"></button>
+                <button id="option_1" class="image option_1"><img class="icon" src="assets\rock.png" alt="rock"></button>
+                <button id="option_2" class="image option_2"><img class="icon" src="assets/paper.png" alt="paper"></button>
+                <button id="option_3" class="image option_3"><img class="icon" src="assets\scissors.png" alt=""></button>
+                <!-- <button class="image option_4"><img class="icon" src="" alt=""></button>
+                <button class="image option_5"><img class="icon" src="" alt=""></button> -->
             </div>
         </div>
         <div class="padding_vs">
             <div class="vs">
-                <div class="image_you"></div>
+                <div id="image_you" class="display image_you">
+                    <img id="rock" class="chose" src="assets\rock.png" alt="rock"><img id="paper" class="chose" src="assets/paper.png" alt="paper"><img id="scissors" class="chose" src="assets\scissors.png" alt="">
+                </div>
                 <div class="battle_text">VS</div>
-                <div class="image_computer"></div>
+                <div class="display image_computer"></div>
             </div>
         </div>
         <div class="padding_winner">
             <div class="winner">
-                <div class="winner_display"></div>
+                <div class="display winner_display"></div>
                 <div class="reason"></div>
             </div>
         </div>
