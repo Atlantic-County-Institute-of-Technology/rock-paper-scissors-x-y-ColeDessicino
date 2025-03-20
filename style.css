@@ -113,6 +113,13 @@ body {
     left: 25px;
 }
 
+#rockai, #paperai, #scissorsai {
+    position: relative;
+    display: none;
+    top: 25px;
+    left: 25px;
+}
+
 .chose {
     height: 100px;
     width: 100px;

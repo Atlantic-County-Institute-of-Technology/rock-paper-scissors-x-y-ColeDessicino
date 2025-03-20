@@ -2,9 +2,13 @@ const option_1 = document.getElementById("option_1");
 const option_2 = document.getElementById("option_2");
 const option_3 = document.getElementById("option_3");
 let image_you = document.getElementById("image_you");
+let image_computer = document.getElementById("image_you");
 const rockid = document.getElementById("rock");
 const paperid = document.getElementById("paper");
 const scissorsid = document.getElementById("scissors");
+const rockaiid = document.getElementById("rockai");
+const paperaiid = document.getElementById("paperai");
+const scissorsaiid = document.getElementById("scissorsai");
 
 
 let clicksrock = 0;
@@ -49,6 +53,25 @@ function choosescissors() {
         rockid.style.display = "none";
         paperid.style.display = "none";
         scissorsid.style.display = "block";
-        clicksscissors = 0
+        clicksscissors = 0;
+    }
+}
+
+let clicks = 0;
+
+option_1.addEventListener("click", computerpick)
+option_2.addEventListener("click", computerpick)
+option_3.addEventListener("click", computerpick)
+
+function computerpick() {
+    clicks++;
+    if( clicks == 1 ) {
+        console.log ();
+        clicks = 0;
+        Math.floor(Math.random() * (10 - 1 + 1) ) + 1;
+        // rockaiid.style.display = "none";
+        // paperaiid.style.display = "none";
+        // scissorsaiid.style.display = "block";
+        
     }
 }
