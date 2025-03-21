@@ -2,13 +2,16 @@ const option_1 = document.getElementById("option_1");
 const option_2 = document.getElementById("option_2");
 const option_3 = document.getElementById("option_3");
 let image_you = document.getElementById("image_you");
-let image_computer = document.getElementById("image_you");
+let image_computer = document.getElementById("image_computer");
 const rockid = document.getElementById("rock");
 const paperid = document.getElementById("paper");
 const scissorsid = document.getElementById("scissors");
 const rockaiid = document.getElementById("rockai");
 const paperaiid = document.getElementById("paperai");
 const scissorsaiid = document.getElementById("scissorsai");
+// let rockai = document.getElementById("1");
+// let paperai = document.getElementById("2");
+// let scissorsai = document.getElementById("3");
 
 
 let clicksrock = 0;
@@ -64,14 +67,24 @@ option_2.addEventListener("click", computerpick)
 option_3.addEventListener("click", computerpick)
 
 function computerpick() {
+    let cpuChoice = Math.floor(Math.random() * (3 - 1 + 1) ) + 1;
     clicks++;
-    if( clicks == 1 ) {
-        console.log ();
-        clicks = 0;
-        Math.floor(Math.random() * (10 - 1 + 1) ) + 1;
-        // rockaiid.style.display = "none";
-        // paperaiid.style.display = "none";
-        // scissorsaiid.style.display = "block";
-        
+    if( cpuChoice == 1 ) {
+        console.log("cpu chose rock");
+        rockaiid.style.display = "block";
+        paperaiid.style.display = "none";
+        scissorsaiid.style.display = "none";
+    }
+    else if( cpuChoice == 2 ) {
+        console.log("cpu chose paper");
+        rockaiid.style.display = "none";
+        paperaiid.style.display = "block";
+        scissorsaiid.style.display = "none";
+    }
+    else if( cpuChoice == 3 ) {
+        console.log("cpu chose scissors");
+        rockaiid.style.display = "none";
+        paperaiid.style.display = "none";
+        scissorsaiid.style.display = "block";
     }
 }
