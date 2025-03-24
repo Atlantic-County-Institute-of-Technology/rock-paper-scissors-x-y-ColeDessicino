@@ -9,10 +9,7 @@ const scissorsid = document.getElementById("scissors");
 const rockaiid = document.getElementById("rockai");
 const paperaiid = document.getElementById("paperai");
 const scissorsaiid = document.getElementById("scissorsai");
-// let rockai = document.getElementById("1");
-// let paperai = document.getElementById("2");
-// let scissorsai = document.getElementById("3");
-
+let _wins = document.getElementById("_wins");
 
 let clicksrock = 0;
 
@@ -66,8 +63,9 @@ option_1.addEventListener("click", computerpick)
 option_2.addEventListener("click", computerpick)
 option_3.addEventListener("click", computerpick)
 
+
 function computerpick() {
-    let cpuChoice = Math.floor(Math.random() * (3 - 1 + 1) ) + 1;
+    cpuChoice = Math.floor(Math.random() * (3 - 1 + 1) ) + 1;
     clicks++;
     if( cpuChoice == 1 ) {
         console.log("cpu chose rock");
@@ -87,4 +85,28 @@ function computerpick() {
         paperaiid.style.display = "none";
         scissorsaiid.style.display = "block";
     }
+}
+
+let clickedrock = 0;
+let clickedpaper = 0;
+let clickedscissors = 0;
+
+option_1.addEventListener("click", () => {
+    thewinner(1)
+})
+option_2.addEventListener("click", () => {
+    thewinner(2)
+})
+option_3.addEventListener("click", () => {
+    thewinner(3)
+})
+
+function thewinner(PlayerChoice) {
+    clickedrock++;
+    if (clickedrock == 1, cpuChoice == 1) {
+        console.log("Tie")
+        clickedrock = 0;
+    }
+    clickedpaper++;
+    clickedscissors++;
 }
