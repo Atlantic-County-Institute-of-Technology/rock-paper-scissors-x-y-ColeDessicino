@@ -103,10 +103,53 @@ option_3.addEventListener("click", () => {
 
 function thewinner(PlayerChoice) {
     clickedrock++;
-    if (clickedrock == 1, cpuChoice == 1) {
+    if (PlayerChoice == 1 && cpuChoice == 1) {
         console.log("Tie")
         clickedrock = 0;
+        _wins.innerHTML = "Tie";
+    }
+    else if (PlayerChoice == 1 && cpuChoice == 2) {
+        console.log("CPU Wins")
+        clickedrock = 0;
+        _wins.innerHTML = "CPU Wins!";
+    }
+    else if (PlayerChoice == 1 && cpuChoice == 3) {
+        console.log("Player Wins")
+        clickedrock = 0;
+        _wins.innerHTML = "You Win!";
     }
     clickedpaper++;
+    if (PlayerChoice == 2 && cpuChoice == 1) {
+        console.log("Player Wins")
+        clickedpaper = 0;
+        _wins.innerHTML = "You Win!";
+    }
+    else if (PlayerChoice == 2 && cpuChoice == 2) {
+        console.log("Tie")
+        clickedpaper = 0;
+        _wins.innerHTML = "Tie";
+    }
+    else if (PlayerChoice == 2 && cpuChoice == 3) {
+        console.log("CPU Wins")
+        clickedpaper = 0;
+        _wins.innerHTML = "CPU Wins!";
+    }
     clickedscissors++;
+    if (PlayerChoice == 3 && cpuChoice == 1) {
+        console.log("CPU Wins")
+        clickedscissors = 0;
+        _wins.innerHTML = "CPU Wins!";
+    }
+    else if (PlayerChoice == 3 && cpuChoice == 2) {
+        console.log("Player Wins")
+        clickedscissors = 0;
+        _wins.innerHTML = "You Win!";
+    }
+    else if (PlayerChoice == 3 && cpuChoice == 3) {
+        console.log("Tie")
+        clickedscissors = 0;
+        _wins.innerHTML = "Tie";
+    }
+    
+    
 }
