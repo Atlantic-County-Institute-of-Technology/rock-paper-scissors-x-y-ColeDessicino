@@ -1,3 +1,5 @@
+// Cole Dessicino 3/26/25
+
 const option_1 = document.getElementById("option_1");
 const option_2 = document.getElementById("option_2");
 const option_3 = document.getElementById("option_3");
@@ -10,6 +12,8 @@ const rockaiid = document.getElementById("rockai");
 const paperaiid = document.getElementById("paperai");
 const scissorsaiid = document.getElementById("scissorsai");
 let _wins = document.getElementById("_wins");
+let playerwins = document.getElementById("playerwins");
+let cpuwins = document.getElementById("cpuwins");
 
 let clicksrock = 0;
 
@@ -64,6 +68,7 @@ option_2.addEventListener("click", computerpick)
 option_3.addEventListener("click", computerpick)
 
 
+// This picks a random number and that number causes the choice to appear
 function computerpick() {
     cpuChoice = Math.floor(Math.random() * (3 - 1 + 1) ) + 1;
     clicks++;
@@ -101,8 +106,10 @@ option_3.addEventListener("click", () => {
     thewinner(3)
 })
 
+// this selects who won
 function thewinner(PlayerChoice) {
     clickedrock++;
+    playerwins = 0;
     if (PlayerChoice == 1 && cpuChoice == 1) {
         console.log("Tie")
         clickedrock = 0;
@@ -150,6 +157,4 @@ function thewinner(PlayerChoice) {
         clickedscissors = 0;
         _wins.innerHTML = "Tie";
     }
-    
-    
 }

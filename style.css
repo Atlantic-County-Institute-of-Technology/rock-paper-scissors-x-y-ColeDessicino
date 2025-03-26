@@ -1,3 +1,4 @@
+/* Cole Dessicino 3/26/25 */
 body {
     overflow: hidden;
     height: 1000px;
@@ -12,13 +13,14 @@ body {
     margin-top: 5%;
     margin-left: 35%;
     margin-right: 35%;
-    height: 650px;
-    width: 600px;
+    height: 600px;
+    width: 610px;
     background: linear-gradient(45deg, rgba(161,45,255,1) 10%, rgba(112,56,255,1) 50%, rgba(161,45,255,1) 90%);
     box-shadow: 0px 0px 100px 0px rgb(0, 0, 0);
     border-radius: 10%;
 }
 
+/* padding spaces out the containers */
 .padding_options {
     padding: 10px;
 }
@@ -33,6 +35,7 @@ body {
 
 }
 
+/* makes all of the buttons have these traits */
 .image {
     height: 70px;
     width: 70px;
@@ -66,22 +69,6 @@ body {
 
 .option_3:active {
     background-color: rgb(152, 253, 105);
-}
-
-.option_4 {
-    background-color: rgb(195, 0, 255);
-}
-
-.option_4:active {
-    background-color: rgb(228, 105, 253);
-}
-
-.option_5 {
-    background-color: rgb(255, 166, 0);
-}
-
-.option_5:active {
-    background-color: rgb(253, 201, 105);
 }
 
 .padding_vs {
@@ -147,13 +134,14 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 200px;
-    width: 500px;
+    width: 570px;
 
 }
 
 ._wins {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     height: 150px;
     width: 500px;
@@ -162,3 +150,22 @@ body {
     font-size: 100px;
 }
 
+.padding_winning {
+    padding: 10px;
+}
+
+.winning {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#playerwins {
+    position: relative;
+    left: -200px;
+}
+
+#cpuwins {
+    position: relative;
+    left: 200px;
+}
