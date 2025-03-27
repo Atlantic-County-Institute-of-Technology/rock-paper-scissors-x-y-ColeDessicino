@@ -14,6 +14,8 @@ const scissorsaiid = document.getElementById("scissorsai");
 let _wins = document.getElementById("_wins");
 let playerwins = document.getElementById("playerwins");
 let cpuwins = document.getElementById("cpuwins");
+let playerwins_value = 1;
+let cpuwins_value = 1;
 
 let clicksrock = 0;
 
@@ -31,6 +33,7 @@ function chooserock() {
     }
 }
 
+
 let clickspaper = 0;
 
 option_2.addEventListener("click", choosepaper);
@@ -46,6 +49,7 @@ function choosepaper() {
     }
 }
 
+
 let clicksscissors = 0;
 
 option_3.addEventListener("click", choosescissors);
@@ -60,6 +64,7 @@ function choosescissors() {
         clicksscissors = 0;
     }
 }
+
 
 let clicks = 0;
 
@@ -92,6 +97,7 @@ function computerpick() {
     }
 }
 
+
 let clickedrock = 0;
 let clickedpaper = 0;
 let clickedscissors = 0;
@@ -106,10 +112,10 @@ option_3.addEventListener("click", () => {
     thewinner(3)
 })
 
+
 // this selects who won
 function thewinner(PlayerChoice) {
     clickedrock++;
-    playerwins = 0;
     if (PlayerChoice == 1 && cpuChoice == 1) {
         console.log("Tie")
         clickedrock = 0;
@@ -119,17 +125,20 @@ function thewinner(PlayerChoice) {
         console.log("CPU Wins")
         clickedrock = 0;
         _wins.innerHTML = "CPU Wins!";
+        cpuwins.innerHTML = "Cpu Score: " + cpuwins_value++;
     }
     else if (PlayerChoice == 1 && cpuChoice == 3) {
         console.log("Player Wins")
         clickedrock = 0;
         _wins.innerHTML = "You Win!";
+        playerwins.innerHTML = "Player Score: " + playerwins_value++;
     }
     clickedpaper++;
     if (PlayerChoice == 2 && cpuChoice == 1) {
         console.log("Player Wins")
         clickedpaper = 0;
         _wins.innerHTML = "You Win!";
+        playerwins.innerHTML = "Player Score: " + playerwins_value++;
     }
     else if (PlayerChoice == 2 && cpuChoice == 2) {
         console.log("Tie")
@@ -140,17 +149,20 @@ function thewinner(PlayerChoice) {
         console.log("CPU Wins")
         clickedpaper = 0;
         _wins.innerHTML = "CPU Wins!";
+        cpuwins.innerHTML = "Cpu Score: " + cpuwins_value++;
     }
     clickedscissors++;
     if (PlayerChoice == 3 && cpuChoice == 1) {
         console.log("CPU Wins")
         clickedscissors = 0;
         _wins.innerHTML = "CPU Wins!";
+        cpuwins.innerHTML = "Cpu Score: " + cpuwins_value++;
     }
     else if (PlayerChoice == 3 && cpuChoice == 2) {
         console.log("Player Wins")
         clickedscissors = 0;
         _wins.innerHTML = "You Win!";
+        playerwins.innerHTML = "Player Score: " + playerwins_value++;
     }
     else if (PlayerChoice == 3 && cpuChoice == 3) {
         console.log("Tie")

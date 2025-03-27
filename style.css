@@ -162,10 +162,10 @@ body {
 
 #playerwins {
     position: relative;
-    left: -200px;
+    left: -100px;
 }
 
 #cpuwins {
     position: relative;
-    left: 200px;
+    left: 100px;
 }
