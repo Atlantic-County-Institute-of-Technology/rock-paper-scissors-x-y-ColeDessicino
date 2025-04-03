@@ -15,7 +15,7 @@ body {
     margin-right: 35%;
     height: 600px;
     width: 610px;
-    background: linear-gradient(45deg, rgba(161,45,255,1) 10%, rgba(112,56,255,1) 50%, rgba(161,45,255,1) 90%);
+    background: linear-gradient(45deg, rgba(161,45,255,1) 10%, rgba(z112,56,255,1) 50%, rgba(161,45,255,1) 90%);
     box-shadow: 0px 0px 100px 0px rgb(0, 0, 0);
     border-radius: 10%;
 }
@@ -128,7 +128,7 @@ body {
     padding: 10px;
 }
 
-.winner {
+.fight {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
