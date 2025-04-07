@@ -77,6 +77,13 @@ option_3.addEventListener("click", computerpick)
 function computerpick() {
     cpuChoice = Math.floor(Math.random() * (3 - 1 + 1) ) + 1;
     clicks++;
+    if(clicks == 1) {
+        rockaiid.style.display = "none";
+        paperaiid.style.display = "none";
+        scissorsaiid.style.display = "none";
+        clicks = 0;
+    }
+    setTimeout (() => {
     if( cpuChoice == 1 ) {
         console.log("cpu chose rock");
         rockaiid.style.display = "block";
@@ -95,6 +102,7 @@ function computerpick() {
         paperaiid.style.display = "none";
         scissorsaiid.style.display = "block";
     }
+    }, 500);
 }
 
 
@@ -114,6 +122,7 @@ option_3.addEventListener("click", () => {
 
 function thewinner(PlayerChoice) {
     clicked++;
+    setTimeout (() => {
     if(PlayerChoice == cpuChoice) {
         winner = "Tie"
         clicked = 0;
@@ -150,4 +159,5 @@ function thewinner(PlayerChoice) {
     _wins.innerHTML = winner;
     playerwins.innerHTML = "Player Score: " + playerwins_value;
     cpuwins.innerHTML = "CPU Score: " + cpuwins_value;
+    }, 500);
 }
